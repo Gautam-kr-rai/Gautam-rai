@@ -1,14 +1,23 @@
 import { useState } from 'react'
 import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import About from './pages/About'
+import Home from './pages/Home'
+import MainLayout from './layouts/MainLayout'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-   <h1 className="text-3xl font-bold underline">
-      Let's build a React app with Tailwind CSS and TypeScript!
-   </h1>
+      <BrowserRouter>
+       <Routes>
+        <Route  element={<MainLayout />}>
+         <Route path='/' element={<Home />} />
+         <Route path='/about' element={<About />} />
+        </Route>
+       </Routes>
+      </BrowserRouter>
     </>
   )
 }
