@@ -26,12 +26,12 @@ const Navbar: React.FC = () => {
           </NavLink>
 
           <NavLink
-            to="/about"
+            to="/skills_tools"
             className={({ isActive }) =>
               isActive ? "text-blue-600" : "text-gray-700 hover:text-blue-500"
             }
           >
-            About
+            Skills & Tools
           </NavLink>
 
           <NavLink
