@@ -33,6 +33,14 @@ const Navbar: React.FC = () => {
           >
             Skills & Tools
           </NavLink>
+          <NavLink
+            to="/experience"
+            className={({ isActive }) =>
+              isActive ? "text-blue-600" : "text-gray-700 hover:text-blue-500"
+            }
+          >
+           Experience
+          </NavLink>
 
           <NavLink
             to="/projects"
