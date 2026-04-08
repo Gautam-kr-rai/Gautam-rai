@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import devimage from "../assets/home/developer.jpg"
 export default function Home() {
   return (
     <div
@@ -71,7 +71,7 @@ export default function Home() {
             transition={{ duration: 4, repeat: Infinity }}
           >
             <img
-              src="\src\assets\home\developer.jpg"
+              src={devimage}
               className="w-full h-full object-cover"
             />
           </motion.div>
