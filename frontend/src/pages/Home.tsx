@@ -35,7 +35,13 @@ export default function Home() {
           </h1>
 
           <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-xl">
-            A Software Developer & Product Engineer focused on building clean, intuitive, and high-performance digital products.
+            A Software Developer & Product Engineer focused on building clean, intuitive, 
+            and high-performance digital products.  
+            <br className="hidden md:block" />
+            <span className="block mt-3 text-sm md:text-base text-gray-400">
+              🎓 Computer Science & Mathematics graduate (2025) ·{" "}
+              <span className="text-cyan-400">Delhi Technological University</span>
+            </span>
           </p>
 
           {/* BUTTONS */}
@@ -52,9 +58,9 @@ export default function Home() {
               📄 Resume
             </a>
 
-            <button className="px-6 py-3 rounded-xl border border-gray-600 text-white hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300">
+            <a href="/contact" className="px-6 py-3 rounded-xl border border-gray-600 text-white hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300">
               Get in touch
-            </button>
+            </a>
           </div>
         </motion.div>
 

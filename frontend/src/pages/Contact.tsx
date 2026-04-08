@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -64,10 +65,25 @@ const Contact = () => {
           </a>
 
           {/* Optional Socials */}
-          <div className="flex gap-4 pt-4 text-gray-400">
-            <span className="hover:text-cyan-400 cursor-pointer">GitHub</span>
-            <span className="hover:text-cyan-400 cursor-pointer">LinkedIn</span>
-          </div>
+          <div className="flex gap-6 pt-4 text-gray-400">
+          <a
+            href="https://github.com/your-username"
+            target="_blank"
+            className="flex items-center gap-2 hover:text-cyan-400 transition"
+          >
+            <FaGithub className="text-lg" />
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/your-profile"
+            target="_blank"
+            className="flex items-center gap-2 hover:text-cyan-400 transition"
+          >
+            <FaLinkedin className="text-lg" />
+            <span>LinkedIn</span>
+          </a>
+        </div>
         </motion.div>
 
         {/* RIGHT SIDE (FORM) */}
