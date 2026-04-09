@@ -1,4 +1,10 @@
 import { motion } from "framer-motion";
+import eams from "../assets/projects/EAMS.png"
+import aibot from "../assets/projects/Ai-bot.png"
+import ecom from "../assets/projects/Ecom.png"
+import pdfsum from "../assets/projects/PdfSum.png"
+import blank from "../assets/projects/blank.png"
+import chatbot from "../assets/projects/chat-bot.png"
 
 const projects = [
   {
@@ -6,7 +12,7 @@ const projects = [
     description:
       "Developed a role-based full-stack attendance system with Admin, Subadmin, and Employee roles. Implemented real-time attendance tracking, reporting dashboards, and export features (PDF/XLSX) using React, Node.js, and MongoDB.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Zustand", "JWT"],
-    image: "/src/assets/projects/EAMS.png",
+    image: eams,
     link: "https://dpoverseas.vercel.app/",
   },
   {
@@ -14,7 +20,7 @@ const projects = [
     description:
       "A fully functional e-commerce platform with product listings, shopping cart functionality, and secure payment processing.",
     tech:["React", "Node.js", "Express", "MongoDB", "Zustand", "JWT"],
-    image: "/src/assets/projects/Ecom.png", 
+    image: ecom, 
     link: "https://e-commerce-logz.onrender.com/",
   },
   {
@@ -22,7 +28,7 @@ const projects = [
     description:
       "A microservices-based backend system built with Spring Boot to manage hotel data and ratings. Designed with modular services, RESTful APIs, and scalable architecture for efficient data handling and future extensibility.",
     tech: ["Java","Spring Boot", "Microservices", "MySQL", "REST APIs", "JPA"],
-    image: "/src/assets/projects/blank.png", 
+    image: blank, 
     link: "https://github.com/Gautam-kr-rai/HotelManagement", 
   },
   {
@@ -30,7 +36,7 @@ const projects = [
     description:
       "A PDF reader application that uses machine learning for document summarization and intelligent information retrieval.",
     tech: ["Python", "ML"],
-    image: "/src/assets/projects/PdfSum.png",
+    image:pdfsum,
     link: "http://live-docs-umber.vercel.app/",
   },
   {
@@ -38,7 +44,7 @@ const projects = [
     description:
       "Developed a chatbot utilizing the GenMini Large Language Model (LLM) to deliver accurate, responsive conversational experiences. Implemented advanced natural language processing techniques for dynamic and context-aware interactions.",
     tech: ["LLM", "NLP", "Python"],
-    image: "/src/assets/projects/Ai-bot.png",
+    image: aibot,
     link: "https://huggingface.co/spaces/gautamkr/chatbot",
   },
   {
@@ -46,7 +52,7 @@ const projects = [
     description:
       "A chatbot built with the MERN stack to improve user engagement and provide real-time support.",
     tech: ["MongoDB", "socket.io","Express", "React", "Node"],
-    image: "/src/assets/projects/chat-bot.png",
+    image: chatbot,
     link: "/courses/chat-bot.png",
   },
 ];

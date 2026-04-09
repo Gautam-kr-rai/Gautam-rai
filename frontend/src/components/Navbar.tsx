@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import hero from "../assets/hero.png"
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Skills & Tools", path: "/skills_tools" },
@@ -19,10 +19,11 @@ const Navbar: React.FC = () => {
         <NavLink
           to="/"
           className="text-xl md:text-2xl font-bold text-white tracking-wide"
-        >
-     <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-      Gautam Rai
-    </span>
+        > 
+          <span className="flex items-center gap-2 text-xl md:text-2xl flex-row font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <img src={hero} alt="" className="h-7 w-7 object-contain" />
+            Gautam Rai
+          </span>
         </NavLink>
 
         {/* Menu */}
