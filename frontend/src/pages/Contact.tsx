@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import axiosInstance from "../lib/axios.ts"
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -14,16 +15,31 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
 
-    //  No backend yet → show error toast
-    toast.error("Feature not implemented yet. Please use Email Me option.");
+    try {
+      const response = await axiosInstance.post("/contact", {
+        name: form.name,
+        email: form.email,
+        message: form.message,
+      });
 
-    // Optional: clear form
-    setForm({ name: "", email: "", message: "" });
-   };
+      console.log("Success:", response.data);
 
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+
+      toast.success("Message sent successfully!");
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Failed to send message.");
+     
+    }
+  };
 
   return (
     <div className="w-full min-h-screen bg-neutral-950 text-white px-6 md:px-16 py-20">
